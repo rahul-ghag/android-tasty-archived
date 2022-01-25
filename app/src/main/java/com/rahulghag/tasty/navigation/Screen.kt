@@ -32,7 +32,7 @@ sealed class Screen(
 
     object RecipeDetail : Screen(route = "recipe/{recipeId}") {
         fun passRecipeId(recipeId: Int): String {
-            return "recipe$recipeId"
+            return "recipe/$recipeId"
         }
     }
 }
