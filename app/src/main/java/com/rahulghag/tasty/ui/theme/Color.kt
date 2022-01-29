@@ -1,7 +1,6 @@
 package com.rahulghag.tasty.ui.theme
 
 import androidx.compose.material.Colors
-import androidx.compose.material.darkColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
@@ -19,8 +18,16 @@ val Colors.bottomBarBackgroundColor: Color
 
 val Colors.bottomBarSelectedContentColor: Color
     @Composable
-    get() = if (isLight) Purple500 else darkColors().onBackground
+    get() = if (isLight) primary else onSurface
 
 val Colors.searchBarBackgroundColor: Color
     @Composable
     get() = if (isLight) Gray100 else Gray900
+
+val Colors.topAppBarBackgroundColor: Color
+    @Composable
+    get() = if (isLight) Color.White else surface
+
+val Colors.topAppBarContentColor: Color
+    @Composable
+    get() = if (isLight) primary else onSurface

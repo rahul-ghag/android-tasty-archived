@@ -36,7 +36,9 @@ fun ExploreRecipesScreen(
 
     Scaffold(
         topBar = {
-            SearchBar()
+            SearchBar(
+                onSearchBarClick = {}
+            )
         }
     ) {
         Box(

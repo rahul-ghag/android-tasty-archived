@@ -1,5 +1,6 @@
 package com.rahulghag.tasty.presentation.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Icon
@@ -20,12 +21,17 @@ import com.rahulghag.tasty.R
 import com.rahulghag.tasty.ui.theme.searchBarBackgroundColor
 
 @Composable
-fun SearchBar() {
+fun SearchBar(
+    onSearchBarClick: () -> Unit,
+) {
     Surface(
         modifier = Modifier
             .fillMaxWidth()
             .height(56.dp)
-            .padding(horizontal = 24.dp, vertical = 8.dp),
+            .padding(horizontal = 24.dp, vertical = 8.dp)
+            .clickable {
+                onSearchBarClick()
+            },
         shape = RoundedCornerShape(20.dp),
         color = MaterialTheme.colors.searchBarBackgroundColor
     ) {
